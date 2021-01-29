@@ -196,6 +196,9 @@
     [self creatableView];
     NSLog(@"汽车数组加载完成了，一共有【%ld】辆汽车",array.count);
     NSLog(@"汽车数组加载完成了，一共有【%ld】辆汽车",array.count);
+    
+    NSLog(@"汽车数组加载完成了，一共有【%ld】辆汽车",array.count);
+    NSLog(@"汽车数组加载完成了，一共有【%ld】辆汽车",array.count);
 }
 
 
