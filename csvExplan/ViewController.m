@@ -122,6 +122,8 @@
     self.tableView.hidden = YES;
     [self.view addSubview:self.tableView];
     NSLog(@"111");
+    NSLog(@"111");
+    NSLog(@"111");NSLog(@"111");
 }
 
 
