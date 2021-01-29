@@ -209,6 +209,7 @@
     NSLog(@"22");
     NSLog(@"22");
     NSLog(@"22");
+    NSLog(@"22");
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
