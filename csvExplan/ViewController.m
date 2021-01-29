@@ -213,21 +213,19 @@
     NSLog(@"22");
     NSLog(@"22");
     NSLog(@"22");
-<<<<<<< HEAD
     NSLog(@"22");
     NSLog(@"22");
     NSLog(@"22");
     NSLog(@"22");NSLog(@"22");
     //master1
     //master1
-=======
-    NSLog(@"22");NSLog(@"22");
->>>>>>> bc86acff83de11ba576fd3cb027dd14677ca4301
     //master1
     //master1
     //master1
     //master1
     //master1//master1//master1//master1//master1//master1
+    //master1
+    
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
