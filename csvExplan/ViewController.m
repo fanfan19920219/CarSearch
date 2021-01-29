@@ -131,6 +131,9 @@
     self.tableView.delegate = self;
     self.tableView.hidden = YES;
     [self.view addSubview:self.tableView];
+    NSLog(@"222");
+    NSLog(@"222");NSLog(@"222");NSLog(@"222");
+    NSLog(@"222");
     
 }
 
