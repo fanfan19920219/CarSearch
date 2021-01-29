@@ -244,6 +244,7 @@
         cell.textLabel.textColor = UIColor.blackColor;
     }
     
+    //master1
     AudiCar *model = self.current_dataSource[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@ %ld年  %ld元 %ldkm (%.2f) ",indexPath.row+1,model.Type,model.year,model.price,model.mileage,model.consumValue];
     return cell;
