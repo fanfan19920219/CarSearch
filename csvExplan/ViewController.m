@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *year;//用户输入框 年
 @property (strong, nonatomic) IBOutlet UITextField *price;//用户输入框 价格
 @property (strong, nonatomic) IBOutlet UITextField *mile;//用户输入框 里程
+@property (weak, nonatomic) IBOutlet UIButton *addCar;
 
 
 @end
@@ -32,6 +33,15 @@
     self.current_dataSource = [NSMutableArray new];
     
     [self explane];
+}
+
+
+
+- (IBAction)addCar:(UIButton *)sender {
+    
+    NSLog(@"current Car");
+    
+    
 }
 
 
