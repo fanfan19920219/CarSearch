@@ -32,7 +32,8 @@
     self.dataSource = [NSMutableArray new];
     self.current_dataSource = [NSMutableArray new];
     
-    [self explane];
+    [self explain];
+    
 }
 
 
@@ -47,6 +48,7 @@
 
 -(IBAction)funcGuide:(UIButton*)sender{
     
+    [self.view endEditing:YES];
     
     double year = [self.year.text doubleValue];
     
@@ -57,7 +59,6 @@
     self.current_dataSource = [self.dataSource mutableCopy];
     
     self.guideLabel.hidden = NO;
-    
     
     //开启异步线程
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -131,19 +132,11 @@
     self.tableView.delegate = self;
     self.tableView.hidden = YES;
     [self.view addSubview:self.tableView];
-    NSLog(@"111");
-    NSLog(@"111");
-    NSLog(@"111");NSLog(@"111");
-    NSLog(@"111");NSLog(@"111");
-    NSLog(@"111");NSLog(@"111");
-
-
     
 }
 
 
-
--(void)explane{
+-(void)explain{
     NSMutableArray *array = [NSMutableArray array];
     NSString *filepath=[[NSBundle mainBundle] pathForResource:@"audi" ofType:@"csv"];
     FILE *fp = fopen([filepath UTF8String], "r");
@@ -194,11 +187,6 @@
     self.current_dataSource = [array mutableCopy];
     self.dataSource = [array  mutableCopy];
     [self creatableView];
-    NSLog(@"汽车数组加载完成了，一共有【%ld】辆汽车",array.count);
-    NSLog(@"汽车数组加载完成了，一共有【%ld】辆汽车",array.count);
-    
-    NSLog(@"汽车数组加载完成了，一共有【%ld】辆汽车",array.count);
-    NSLog(@"汽车数组加载完成了，一共有【%ld】辆汽车",array.count);
     //master
 }
 
@@ -206,30 +194,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.current_dataSource.count;
-    NSLog(@"22");
-    NSLog(@"22");
-    NSLog(@"22");
-    NSLog(@"22");
-    NSLog(@"22");
-    NSLog(@"22");
-    NSLog(@"22");
-    NSLog(@"22");
-    NSLog(@"22");
-    NSLog(@"22");
-    NSLog(@"22");NSLog(@"22");
-    //master1
-    //master1
-    //master1
-    //master1
-    //master1
-    //master1
-    //master1//master1//master1//master1//master1//master1
-    //master1
+    
     
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -251,6 +220,16 @@
     
     
 }
+
+
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
+    
+}
+
+
 
 @end
 
